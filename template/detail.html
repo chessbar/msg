@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>评论</title>
+	<link rel="stylesheet" href="http://localhost/msg_oop/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="http://localhost/msg_oop/css/msg.css" />
+	<script src="http://localhost/msg_oop/js/jquery-1.8.3.js"></script>
+	<script src="http://localhost/msg_oop/js/msg.js"></script>
+	<style type="text/css">
+		#main .release{width: 580px;}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div class="msg-box">
+				<div class="msg" mid="<?php echo $msg['msg_id']?>">
+					<div class="msger"><img src="http://localhost/msg_oop/images/<?php echo $msg['msg_head']?>.jpg" height="32" width="32"><?php echo $msg['msger']?></div>
+					<div class="msg-content">
+						<?php echo $msg['msg_content']?>
+					</div>
+					<div class="msg-tools">
+						<div class="left">
+							<a class="msg-up" href="javascript:;" mid="<?php echo $msg['msg_id']?>"><span class="glyphicon glyphicon-thumbs-up"></span><span class="up_num"><?php echo $msg['msg_up']?></span></a>
+							<a class="msg-down" href="javascript:;" mid="<?php echo $msg['msg_id']?>"><span class="glyphicon glyphicon-thumbs-down"></span>
+							<span class="down_num"><?php echo $msg['msg_down']?></span></a>
+						</div>
+					</div>
+				</div>
+				<div class="reply">
+					<div class="reply-num">评论（<?php echo count($reply);?>）</div>
+					<?php
+						if(!empty($reply)){
+							foreach ($reply as $k => $v) {?>
+								<div class="reply-item">
+								   <div class="reply-img">
+								   	<img src="http://localhost/msg_oop/images/<?php echo $v['msger_head'];?>.jpg" height="45" width="45">
+								   </div>
+								   <div class="reply-content">
+								   	<a><?php echo $v['msger'];?></a>
+								   	<span><?php echo $v['msg_content'];?></span>
+								   </div>
+								   <div class="reply-no"><?php echo $v['msg_id'];?></div>
+							     </div>
+							<?php }
+						}else{
+							echo "还没有人回复，赶紧来抢沙发！！";
+						}
+					 
+					?>
+<div class="release">
+		<div class="rel_title">发表评论</div>
+<div class="rel_content">
+	<form class="form-horizontal" role="form" action="" method="post">
+	<input type="hidden" value="<?php echo $msg['msg_id']?>" name="pid">
+	  <p><input type="text" class="form-control" placeholder="请输入您的名字" name="msger"></p>
+	 <p> <textarea class="form-control" rows="3" name="msg_content" placeholder="请输入内容"></textarea></p>
+	 <p> <button type="submit" class="btn btn-default">发表</button></p>
+	</form>
+</div>
+</div>
+				</div>
+				  
+		</div>
+	</div>
+	<div class="tools">
+			<div class="replay-box">
+				<a href="javascript:;">评论</a>
+			</div>
+			<div class="back-index">
+				<a href="http://localhost/msg_oop/index.php">返回首页</a>
+			</div>
+			<div class="return-top">
+				<a href="javascript:;">返回顶部</a>
+			</div>
+    </div>
+</body>
+</html>

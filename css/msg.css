@@ -1,0 +1,63 @@
+*{margin: 0; padding: 0px;}
+	body{background: #ECE5D8; font-family: "微软雅黑";
+    font-size: 14px;}
+	#main{width: 940px;margin: 0 auto;height: auto;overflow: hidden;}
+	#main .msg-box{width: 620px;float: left;}
+	#main .msg-box .msg{width: 620px; background: #fff;height:auto;box-shadow: 0px 0px 5px #f5f5f5;border-radius: 2px;margin-bottom: 20px;padding: 1px;overflow: hidden;}
+	#main .msg-box .msger{background: #f5f5f5;height:45px;line-height: 45px;text-indent: 1em;}
+	#main .msg-box .msger span{display: none;float: right;margin-right: 20px;cursor: pointer;margin-top: 10px;}
+	i{color:#aaa;font-size: 10px;}
+	#main .msg-box .msger img{margin-right: 8px;}
+	#main .msg-box .msg-content{padding: 20px;}
+	#main .ad-box{width: 300px;float: left;}
+	#main .msg-box .msg-tools{padding: 10px 20px;height:50px;}
+	#main .msg-box .msg-tools .left{float: left;}
+	#main .msg-box .msg-tools .right{float: right;}
+	#main .msg-box .msg-tools a{width: 100px;height: 30px;border: 1px solid #ddd;padding: 5px 10px;border-radius: 4px;text-decoration: none;;}
+	#main .msg-box .msg-tools a:hover{border: 1px solid #ECE5D8;}
+	 div.tools{position: absolute;position:fixed;
+		width: 50px;height:auto;
+		bottom:0px;
+		cursor: pointer;
+		}
+		div.tools a{text-decoration: none;}
+		div.tools .replay-box{
+			width: 50px;
+			height:50px;
+			line-height: 50px;
+			text-align: center;
+			border: 1px solid #E0A85D;
+			background: #fff;
+		}
+		div.tools .back-index,div.tools .return-top{
+			width: 50px;
+			height:50px;
+			padding: 5px;
+			line-height: 20px;
+			text-align: center;
+			border: 1px solid #E0A85D;
+			border-top:none;
+			background: #fff;
+		}
+		div.tools .return-top{
+			display: none;
+		}
+		#main .release{
+			width: 620px; background: #fff;height:auto;box-shadow: 0px 0px 5px #f5f5f5;border-radius: 2px;margin-top: 20px;padding: 1px;overflow: hidden;margin-top: 100px;
+		}
+		#main .rel_title{
+			background: #f5f5f5;height:45px;line-height: 45px;text-indent: 2em;
+		}
+		#main .rel_content{padding: 20px;}
+		#main .rel_content p{margin-bottom: 10px;}
+/*评论页面*/
+#main .reply{
+	width: 620px; background: #fff;height:auto;box-shadow: 0px 0px 5px #f5f5f5;border-radius: 2px;padding: 20px;overflow: hidden;
+}
+#main .reply-item .reply-img{width: 50px;height: 50px;float: left;margin-right: 10px;}
+#main .reply-item{
+	border-bottom: 1px solid #F4F2EF;overflow: hidden;padding: 5px;
+}
+#main .reply-content{float: left;width: 450px;line-height: 1.8em}
+#main .reply-content a{color:#9B8878;display: block;}
+#main .reply-item .reply-no{width: 50px;height: 50px;float: right;line-height: 50px;text-align: center;color:#a5a5a5;}

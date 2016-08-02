@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>编辑</title>
+	<link rel="stylesheet" href="http://localhost/msg_oop/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="http://localhost/msg_oop/css/msg.css" />
+	<script src="http://localhost/msg_oop/js/jquery-1.8.3.js"></script>
+	<script src="http://localhost/msg_oop/js/msg.js"></script>
+	<style type="text/css">
+		#main .release{width: 580px;}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div class="msg-box">
+				<div class="reply">
+					
+			<div class="release">
+					<div class="rel_title">编辑留言</div>
+			<div class="rel_content">
+				<form class="form-horizontal" role="form" action="" method="post">
+				<input type="hidden" value="<?php echo $msg['msg_id']?>" name="pid">
+				  <p><input type="text" class="form-control" placeholder="请输入您的名字" name="msger" value="<?php echo $msg['msger']?>"></p>
+				 <p> <textarea class="form-control" rows="5" name="msg_content" placeholder="请输入内容" ><?php echo $msg['msg_content']?></textarea></p>
+				 <p> <button type="submit" class="btn btn-default">提交</button></p>
+				</form>
+			</div>
+			</div>
+				</div>
+				  
+		</div>
+	</div>
+</body>
+</html>
